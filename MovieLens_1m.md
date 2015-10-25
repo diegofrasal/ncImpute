@@ -1,6 +1,7 @@
 # Matrix completion for the MovieLens1m data set
 
 We provide within our ```ncImpute``` package the famous ```MovieLens 100k``` and ```1m``` data sets.
+
 This example carries out the corresponding matrix completion for the particular value of gamma ```=20``` in the MC+ penalty.
 
 ```
