@@ -26,7 +26,6 @@ V=qr.Q(decomp)
 
 set.seed(101)
 #Forming singular values and noise with SNR
-#d=sort(rpareto(J, 1, 1.0001),decreasing=TRUE)
 d=sort(runif(J, 0, 100), decreasing=TRUE)
 d
    
@@ -39,7 +38,6 @@ den=SNR*var(as.vector(E.old))
 tau=num/den
 #New noise matrix
 E.real=sqrt(tau)*E.old
-#real.SNR=num/var(as.vector(E.real))
 
 #Forming matrix x
 x=U%*%(d*t(V)) + E.real
@@ -56,14 +54,13 @@ min.lam=max.lam*eps
 lam.list=seq(from=max.lam, to=min.lam, length.out=n.lambda)
 
 #Gamma grid
-#gam.list=c(100,70,50,30,20,15,10,9,8,7,6,5,4.5,4,3.5,3,2.5,2,1.5,1.1)
 gam.list=c(5000,1000,500,100,80,70,50,30,20,15,10,9,8,7,6,5.5,5,4.5,4,3.5,3,2.5,2,1.5,1.1)
 Train=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
 Test=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
 ranks=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
+
 #Start Exploring Grid
 fit.prev = vector("list",length(lam.list))
-prt = proc.time()
 for(i in 1:length(gam.list)){
     for(j in 1:length(lam.list)){
         if(i==1){
