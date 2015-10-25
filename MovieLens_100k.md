@@ -1,6 +1,6 @@
 # Matrix completion for the MovieLens100k data set
 
-We provide within our ```ncImpute``` package the famous MovieLens 100k and 1m data sets.
+We provide within our ```ncImpute``` package the famous ```MovieLens 100k``` and ```1m``` data sets.
 
 ```
 library(ncImpute)
