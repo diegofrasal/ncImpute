@@ -1,3 +1,5 @@
+Noisy matrix completion under the Random Orthogonal Model
+
 ```
 library(ncImpute)
 
@@ -22,7 +24,7 @@ V=matrix(rnorm(p*J),p,J)
 decomp=qr(V)
 V=qr.Q(decomp)
 
-set.seed(randSeed)
+set.seed(101)
 #Forming singular values and noise with SNR
 #d=sort(rpareto(J, 1, 1.0001),decreasing=TRUE)
 d=sort(runif(J, 0, 100), decreasing=TRUE)
@@ -46,18 +48,13 @@ ix=seq(np)
 imiss=sample(ix,np*missfrac,replace=FALSE)
 xna=x
 xna[imiss]=NA
-#xna=na2Incomplete(xna)
 
 #Smallest value of lambda such that ncImpute returns the ZERO solution and lambda grid
 max.lam=lambda0(xna)
-inspect(max.lam)
 max.lam=max.lam-0.1
-inspect(max.lam)
-#lam.list=exp(seq(from=log(max.lam), to=log(min.lam), length.out=n.lambda))
-#inspect(lam.list)
 min.lam=max.lam*eps
 lam.list=seq(from=max.lam, to=min.lam, length.out=n.lambda)
-inspect(lam.list)
+
 #Gamma grid
 #gam.list=c(100,70,50,30,20,15,10,9,8,7,6,5,4.5,4,3.5,3,2.5,2,1.5,1.1)
 gam.list=c(5000,1000,500,100,80,70,50,30,20,15,10,9,8,7,6,5.5,5,4.5,4,3.5,3,2.5,2,1.5,1.1)
@@ -105,11 +102,8 @@ for(i in 1:length(gam.list)){
            }        
         }
     }
-    inspect(Train)
-    inspect(Test)
-    inspect(ranks)
 }
-running.time = proc.time() - prt
-running.time = running.time[1]
-inspect(running.time)
+Train
+Test
+ranks
 ```
