@@ -41,7 +41,6 @@ den=SNR*var(as.vector(E.old))
 tau=num/den
 #New noise matrix
 E.real=sqrt(tau)*E.old
-#real.SNR=num/var(as.vector(E.real))
 
 #Forming matrix x
 x=U%*%(d*t(V)) + E.real
@@ -58,7 +57,7 @@ xna[imiss]=NA
 imiss=which(is.na(xna)==TRUE)
 missfrac=length(imiss)/np
 
-inspect(missfrac)
+print(missfrac)
 xna
 
 #Smallest value of lambda such that ncImpute returns the ZERO solution and lambda grid
