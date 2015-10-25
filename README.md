@@ -6,7 +6,7 @@ This ```R``` package provides iterative algorithms for matrix completion based o
 To install the current source version of our package, simply type the follwing instructions within your ```R``` session:
 
 ```
-install.packages("/your_file_path/ncImpute_1.0.tar.gz", lib="/your_R_packages_path", repos=NULL, type="source")
+install.packages("/your_file_path/ncImpute_1.0.tar.gz", lib="/your_R_packages_library", repos=NULL, type="source")
 ```
 
 A series of worked examples are as follows:
