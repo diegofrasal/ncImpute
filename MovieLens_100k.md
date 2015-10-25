@@ -1,4 +1,4 @@
-# Matrix completion under the Random Orthogonal Model
+# Matrix completion for the MovieLens100k data set
 
 ```
 library(ncImpute)
