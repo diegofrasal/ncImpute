@@ -5,17 +5,6 @@ We provide within our ```ncImpute``` package the famous ```MovieLens 100k``` and
 ```
 library(ncImpute)
 
-
-for (e in commandArgs(TRUE)) {
-  ta = strsplit(e,"=",fixed=TRUE)
-  if(! is.na(ta[[1]][2])) {
-    temp = ta[[1]][2]
-    temp = as.numeric(temp)
-    assign(ta[[1]][1],temp)
-    cat("assigned ",ta[[1]][1]," the value of |",temp,"|\n")
-  } 
-}
-
 ### MovieLens 1m ###
 set.seed(0)
 J=250
