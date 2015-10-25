@@ -23,13 +23,13 @@ which(colSums(ML100k.m)==0)
 ML100krc = biScale(ML100k.m, row.center=TRUE, row.scale=FALSE, col.center=TRUE, col.scale=FALSE, trace=TRUE)
 
 itest=sample(seq(length(Omega)),20000,replace=FALSE)
-inspect(length(itest))
+print(length(itest))
 
 testData=ML100k[itest,]
-inspect(dim(testData)[1])
+print(dim(testData)[1])
 
 trainData=ML100k[-itest,]
-inspect(dim(trainData)[1])
+print(dim(trainData)[1])
 
 # Row/Column Centering & Assignment of Attributes
 x=trainData[,"rating"]
@@ -42,7 +42,7 @@ names(attributes(ML100knew))
 norm(ML100knew)
 1 - length(which(ML100knew==0))/(dim(ML100knew)[1]*dim(ML100knew)[2])
 
-#Lambdagrid
+#Lambda grid
 max.lam = 35
 min.lam = 2
 n.lambda = 100
