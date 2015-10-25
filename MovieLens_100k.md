@@ -1,5 +1,7 @@
 # Matrix completion for the MovieLens100k data set
 
+We provide within our ```ncImpute``` package the famous
+
 ```
 library(ncImpute)
 
