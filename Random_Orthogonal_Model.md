@@ -1,4 +1,4 @@
-Noisy matrix completion under the Random Orthogonal Model
+# Noisy matrix completion under the Random Orthogonal Model
 
 ```
 library(ncImpute)
