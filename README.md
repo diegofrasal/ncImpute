@@ -9,7 +9,7 @@ To install the current source version of our package, simply type the follwing i
 install.packages("/your_file_path/ncImpute_1.0.tar.gz", lib="/your_R_packages_library", repos=NULL, type="source")
 ```
 
-A series of worked examples are as follows:
+A series of worked examples follow below. More documentation to come.
 
 ```
 library(ncImpute)
