@@ -64,7 +64,6 @@ xna=x
 xna[imiss]=NA
 U
 V
-#xna=na2Incomplete(xna)
 
 #Smallest value of lambda such that ncImpute returns the ZERO solution and lambda grid
 max.lam=lambda0(xna)
