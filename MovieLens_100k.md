@@ -21,7 +21,7 @@ length(Omega)
 which(rowSums(ML100k.m)==0)
 which(colSums(ML100k.m)==0)
 
-# i-scaling of ML100k
+#Bi-scaling of ML100k
 ML100krc = biScale(ML100k.m, row.center=TRUE, row.scale=FALSE, col.center=TRUE, col.scale=FALSE, trace=TRUE)
 
 itest=sample(seq(length(Omega)),20000,replace=FALSE)
