@@ -17,11 +17,11 @@ ML100k.m = Incomplete(i=ML100k[,"user_id"],j=ML100k[,"item_id"],x=ML100k[,"ratin
 Omega = which(ML100k.m!=0)
 length(Omega)
 
-# Verifying every row and column has at least one element
+#Verifying every row and column has at least one element
 which(rowSums(ML100k.m)==0)
 which(colSums(ML100k.m)==0)
 
-#Bi-scaling of ML100k
+# i-scaling of ML100k
 ML100krc = biScale(ML100k.m, row.center=TRUE, row.scale=FALSE, col.center=TRUE, col.scale=FALSE, trace=TRUE)
 
 itest=sample(seq(length(Omega)),20000,replace=FALSE)
@@ -33,7 +33,7 @@ print(dim(testData)[1])
 trainData=ML100k[-itest,]
 print(dim(trainData)[1])
 
-# Row/Column Centering & Assignment of Attributes
+#Row/Column Centering & Assignment of Attributes
 x=trainData[,"rating"]
 x=x-(ML100krc@`biScale:row`$center)[trainData[,"user_id"]]
 x=x-(ML100krc@`biScale:column`$center)[trainData[,"item_id"]]
