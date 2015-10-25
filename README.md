@@ -33,4 +33,4 @@ fit5=ncImpute(xnas,rank=50,lambda=10)
 ximp=complete(xna,fit4$fit)
 impute(fit5$fit,i=c(1,3,7),j=c(2,5,10))
 impute(fit5$fit,i=c(1,3,7),j=c(2,5,10),unscale=FALSE)#ignore scaling and centering
-"""
+```
