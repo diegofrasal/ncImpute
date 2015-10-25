@@ -17,7 +17,7 @@ ML1m.m = Incomplete(i=ML1m[,"user_id"],j=ML1m[,"item_id"],x=ML1m[,"rating"])
 Omega = which(ML1m.m!=0)
 length(Omega)
 
-# Verifying every row and column has at least one element
+#Verifying every row and column has at least one element
 which(rowSums(ML1m.m)==0)
 which(colSums(ML1m.m)==0)
 
@@ -33,7 +33,7 @@ print(dim(testData)[1])
 trainData=ML1m[-itest,]
 print(dim(trainData)[1])
 
-# Row/Column Centering & Assignment of Attributes
+#Row/Column Centering & Assignment of Attributes
 x=trainData[,"rating"]
 x=x-(ML1mrc@`biScale:row`$center)[trainData[,"user_id"]]
 x=x-(ML1mrc@`biScale:column`$center)[trainData[,"item_id"]]
