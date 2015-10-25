@@ -51,8 +51,9 @@ n.lambda = 100
 lam.list = exp(seq(from=log(max.lam), to=log(min.lam), length.out=n.lambda))
 
 #Gamma grid
+gamma.index=9
 gam.list=c(5000,1000,500,100,80,70,50,30,20,15,10,9,8,7,6,5.5,5,4.5,4,3.5,3,2.5,2,1.5,1.1)
-gam.list=gam.list[randSeed]
+gam.list=gam.list[gamma.index]
 Train=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
 Test=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
 ranks=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
@@ -90,7 +91,7 @@ for(i in 1:length(gam.list)){
               Test[i,j]=RMSE(ximp,testData[,"rating"])
               ranks[i,j]=fit.prev[[j]]$est.rank          
         }
-        cat(randSeed,gam.list[i],j,lam.list[j],"train",Train[i,j],"test",Test[i,j],"rank",ranks[i,j],"rank.max",rank.max,"\n")        
+        cat(gamma.index,gam.list[i],j,lam.list[j],"train",Train[i,j],"test",Test[i,j],"rank",ranks[i,j],"rank.max",rank.max,"\n")        
         rank.max=ranks[i,j] + 15        
     }
 }
