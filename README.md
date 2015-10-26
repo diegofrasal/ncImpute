@@ -11,7 +11,7 @@ install.packages("/your_file_path/ncImpute_1.0.tar.gz", lib="/your_R_packages_li
 
 For users with ```Mac OS X 10.4``` and higher, you must first make sure you have an updated version of [GNU Fortran](https://cran.r-project.org/bin/macosx/tools/){:target="_blank"} properly installed.
 
-A series of worked examples follow below. More documentation to come.
+A series of worked examples follow below. More documentation to come. This is [a link](http://example.com){:target="_blank"} that opens in a new window.
 
 ```
 library(ncImpute)
