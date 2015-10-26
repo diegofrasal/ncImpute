@@ -3,6 +3,12 @@
 We provide within our ```ncImpute``` package the famous ```MovieLens1m``` data set. This example carries out the corresponding matrix completion for the particular value of gamma ```=20``` in the MC+ penalty.
 
 ```
+# The following code reproduces the MovieLens1m example presented in the numerical experiments 
+# of our paper "Matrix Completion with Non-Convex Regularization: Thresholding Operators and 
+# Algorithms". The present code takes approximately 2 hours to run as it explores a lambda x 
+# gamma grid of length 100 x 1 for the specific value of gamma = 20. For speedier results, try 
+# reducing the size of the grid or the converge threshold to 1e-03.
+
 library(ncImpute)
 
 ### MovieLens 1m ###
