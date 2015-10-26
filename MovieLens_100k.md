@@ -3,6 +3,11 @@
 We provide within our ```ncImpute``` package the famous ```MovieLens100k``` data set.
 
 ```
+# The following code reproduces the MovieLens100k example presented in the numerical experiments of
+# our paper "Matrix Completion with Non-Convex Regularization: Thresholding Operators and Algorithms".
+# The present code takes approximately 3 hours to run as it explores a lambda x gamma grid of length
+# 100 x 25. For speedier results, try reducing the size of the grid or the converge threshold to 1e-03.
+
 library(ncImpute)
 
 ### MovieLens 100k ###
