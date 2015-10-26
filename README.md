@@ -9,7 +9,7 @@ To install the current source version of our package in a ```Windows 10``` opera
 install.packages("/your_file_path/ncImpute_1.0.tar.gz", lib="/your_R_packages_library", repos=NULL, type="source")
 ```
 
-For users with ```Mac OS X 10.4``` and higher, you must first make sure you have an updated version of GNU Fortran installed [link to Google!](http://google.com).
+For users with ```Mac OS X 10.4``` and higher, you must first make sure you have an updated version of ```GNU Fortran``` installed [link to Google!](http://google.com).
 
 A series of worked examples follow below. More documentation to come.
 
