@@ -40,7 +40,7 @@ V[(4*br+1):(5*br),(4*bc+1):(5*bc)]=matrix(rnorm(br*bc),br,bc)
 decomp=qr(V)
 V=qr.Q(decomp)
 
-set.seed(101)
+set.seed(1)
 #Forming singular values and noise with SNR
 d=sort(runif(J, 0, 100), decreasing=TRUE)
 d
