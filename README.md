@@ -3,7 +3,7 @@ Matrix Completion via Non-Convex Regularization:
 
 This ```R``` package provides iterative algorithms for matrix completion based on non-convex regularization of the singular values. The main approach uses iterative MC+ thresholded singular value decompositions to impute the missing values, and has an "EM" flavor, in that at each iteration the matrix is completed with the current estimate. For large matrices there is a special sparse-matrix class named "Incomplete" that efficiently handles all computations. The package includes procedures for centering and scaling rows, columns or both.
 
-To install the current source version of our package in a ```Windows 10``` operating system, simply type the follwing instructions within your ```R``` session:
+To install the current source version of our package, you should first have installed the ```Matrix``` and ```svd``` packages available from the <a href="https://cran.r-project.org/" target="_blank">CRAN</a> repository. Users with a ```Windows 10``` operating system simply have to type the follwing instruction within the current ```R``` session:
 
 ```
 install.packages("/your_file_path/ncImpute_1.0.tar.gz", lib="/your_R_packages_library", repos=NULL, type="source")
@@ -15,7 +15,7 @@ A series of worked examples follow below. More documentation to come.
 
 ```
 library(ncImpute)
-set.seed(101)
+set.seed(1)
 n=200
 p=100
 J=50
