@@ -24,7 +24,7 @@ V=matrix(rnorm(p*J),p,J)
 decomp=qr(V)
 V=qr.Q(decomp)
 
-set.seed(101)
+set.seed(1)
 #Forming singular values and noise with SNR
 d=sort(runif(J, 0, 100), decreasing=TRUE)
 d
