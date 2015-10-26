@@ -1,8 +1,12 @@
 # Noisy matrix completion under Non-Uniform Sampling
 
 ```
-library(ncImpute)
+# The following code reproduces the Non-Uniform Sampling Model presented in the numerical experiments
+# of our paper "Matrix Completion with Non-Convex Regularization: Thresholding Operators and Algorithms".
+# The present code takes approximately 3 hours to run as it explores a lambda x gamma grid of length
+# 100 x 25. For speedier results, try reducing the size of the grid or the matrix dimensions.
 
+library(ncImpute)
 
 #### Random Orthogonal Model ####
 set.seed(0)
