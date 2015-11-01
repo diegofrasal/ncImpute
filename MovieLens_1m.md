@@ -63,7 +63,7 @@ gam.list=gam.list[gamma.index]
 Train=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
 Test=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
 ranks=matrix(0, nrow=length(gam.list),ncol=length(lam.list))
-inspect(gam.list)
+print(gam.list)
 
 #Start Exploring Grid
 fit.prev = vector("list",length(lam.list))
