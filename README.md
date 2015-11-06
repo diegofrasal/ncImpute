@@ -17,7 +17,6 @@ A series of worked examples follow below. More documentation to come.
 
 ```
 library(ncImpute)
-library(glmnet)
 set.seed(1)
 n=200
 p=100
